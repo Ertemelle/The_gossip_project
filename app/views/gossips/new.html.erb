@@ -1,0 +1,5 @@
+<%= form_for @gossip, url: {action: 'create'} do |f| %>
+title: <%= f.text_field :gossip_title, placeholder: 'Title' %><br/>
+content: <%= f.text_field :gossip_content, placeholder: 'Your content' %><br/>
+<%= f.submit %>
+<% end %>
