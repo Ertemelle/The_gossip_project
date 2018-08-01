@@ -15,6 +15,12 @@ class GossipsController < ApplicationController
   private
 
   def gossip_params
-    params.require(:gossip).permit(:title, :content, :anonymous_gossiper)
+    params.require(:gossip).permit(:gossip_title, :gossip_content, :anonymous_gossiper)
+  end
+
+  def edit
+    @gossip = Gossip.find(params[:id])
+    puts @gossip
+    puts "==========================================="
   end
 end
