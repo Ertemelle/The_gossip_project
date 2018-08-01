@@ -1,5 +1,14 @@
-<%= form_for @gossip, url: {action: 'create'} do |f| %>
-title: <%= f.text_field :gossip_title, placeholder: 'Title' %><br/>
-content: <%= f.text_field :gossip_content, placeholder: 'Your content' %><br/>
-<%= f.submit %>
-<% end %>
+<h1>Création d'un nouveau Gossip</h1>
+
+<%= form_for @gossip do |f| %>
+  <div class="form-group">
+    <label>Nom du Gossip: </label>
+      <%= f.text_field :gossip_title, class: 'form-control', placeholder: 'Title' %>
+    </div>
+    <div class="form-group">
+      <label>Quel est ton gossip? </label>
+        <%= f.text_area :gossip_content, class: 'form-control', placeholder: 'Ton gossip' %>
+    </div>
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </div>
+ <% end -%>
