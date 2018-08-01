@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2018_07_26_181239) do
 
   create_table "gossips", force: :cascade do |t|
     t.string "gossip_title"
+    t.string "anonymous_gossiper"
     t.text "gossip_content"
     t.datetime "gossip_date"
     t.integer "user_id"
