@@ -1,6 +1,7 @@
-<h2>Voici le titre de ton gossip : <%= @gossip.gossip_title %></h2>
+<h1>Voici le titre de ton gossip : </h1>
+<p><%= @gossip.gossip_title %><p/>
 
-<p>Voici le contenu de ton gossip :</p><br/>
+<h3>Voici le contenu de ton gossip :</h3>
 <p><%= @gossip.gossip_content %><p/>
 
 <%= link_to "Modifier le gossip", edit_gossip_path, class: "btn btn-lg btn-primary" %>
