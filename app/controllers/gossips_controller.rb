@@ -11,7 +11,13 @@ class GossipsController < ApplicationController
     @gossip = Gossip.find(params[:id])
     gossip_params = params.require(:gossip).permit(:gossip_title, :gossip_content)
     @gossip.update(gossip_params)
-    redirect_to gossip_path
+    redirect_to _path
+  end
+
+    def destroy
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
+    redirect_to home_path
   end
 
 	def create

@@ -5,3 +5,4 @@
 <p><%= @gossip.gossip_content %><p/>
 
 <%= link_to "Modifier le gossip", edit_gossip_path, class: "btn btn-lg btn-primary" %>
+<%= link_to 'Clique pour détruire', @gossip, method: :delete %>
